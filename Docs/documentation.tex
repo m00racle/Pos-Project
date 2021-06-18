@@ -1,0 +1,71 @@
+% MEMO: THIS IS THE RECOMMENDED PREAMBLE
+
+\documentclass[twoside]{report}
+% document class two side means margins are set for book like documents
+% report means you can use Chapters book also the same
+% article can only use sections.
+
+%package list and settings!
+
+\usepackage{float} 
+%required for the figures and tables to be located as intended 
+% USE [!ht] after tables or figures => \begin{figure}[!ht]
+
+\usepackage{ulem}
+% required for strikethrough or any line stikes wavy lines accessories 
+
+\usepackage{amsmath}
+% additional for math formulas typing
+
+\usepackage{caption}
+\usepackage{subcaption}
+% required for making captions (auto numbering) for figures and tables
+% the numbering is depends on the documentclass input  
+% if this is report the caption is use the Chapter and sequence in the chapter
+% for article is the section used for numbering.
+
+\usepackage{graphicx}
+% this package is used to \includegraphics[width=...\textwidth]{path}
+\graphicspath{{./images/}}
+
+\usepackage{geometry}
+% this package supposedly to give the user ability to change margins-spaces settings.
+
+\usepackage{hyperref}
+% hyperlink packages used mostly for \href{URL}{text}
+\hypersetup{colorlinks=true, linkcolor=blue}
+
+\usepackage{color}
+\definecolor{anti-flashwhite}{rgb}{0.95, 0.95, 0.96}
+
+
+\usepackage{listings}
+% this package is to facilitate code highlighting for certain programming language
+% WARNING: NOT ALL PROGRAMMING LANGUAGES ARE SUPPORTED BY THIS LINTER.
+% NOTE: You can customize the linter yourself using:
+% \lstdefinestyle{name of style}{key value data on properties.}
+\lstset{ % General setup for the package
+    language=Python,
+    basicstyle=\small\ttfamily,
+	backgroundcolor=\color{anti-flashwhite}
+    numbers=left,
+     numberstyle=\tiny,
+    frame=tb,
+    tabsize=4,
+    columns=fullflexible,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    showstringspaces=false,
+    showtabs=false,
+    keepspaces,
+    commentstyle=\color{red},
+    keywordstyle=\color{blue}
+}
+
+% set the title author data
+\title{POS PROJECT}
+\author{Yanuar Heru Prakosa}
+
+\begin{document}
+    \maketitle
+\end{document}
